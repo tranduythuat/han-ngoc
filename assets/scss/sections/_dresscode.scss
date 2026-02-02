@@ -6,7 +6,7 @@
     .content {
         width: 100%;
         perspective: 1000px;
-        background: url('../../assets/images/flower_bg_02.png') no-repeat right 24% / 45%;
+        background: url('../../assets/images/flower_bg_02.png') no-repeat right 20% / 45%;
         background-color: $primary-color;
         padding-bottom: 23%;
         h2 {
@@ -17,29 +17,44 @@
         }
         .desc-img{
             margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 3%;
             img {
                 max-width: 50px;
                 width: 100%;
                 height: auto;
             }
-        }
-        .color-palette {
-            margin: 5% 0 3%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            gap: 2%;
-
-            .color-circle {
-                max-width: 35px;
-                width: 100%;
-                aspect-ratio: 1;
-                border-radius: 50%;
+            .dresscode-icon {
+                width: 10%;
+                @include flex-center;
+                .color-circle {
+                    max-width: 35px;
+                    width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
             }
         }
+        // .color-palette {
+        //     margin: 5% 0 3%;
+        //     display: flex;
+        //     justify-content: center;
+        //     text-align: center;
+        //     gap: 2%;
+
+        //     .color-circle {
+        //         max-width: 35px;
+        //         width: 100%;
+        //         aspect-ratio: 1;
+        //         border-radius: 50%;
+        //     }
+        // }
         .sub-text {
             font-size: 16px;
             font-family: $font-ICIELBCOLDSTYLE;
+            margin-top: 2%;
         }
         .couple-img {
             width: 100%;

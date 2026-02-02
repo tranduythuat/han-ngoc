@@ -213,14 +213,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const timer = setInterval(updateCountdown, 1000);
   }
 
-  const weddingDate = new Date("2026-03-06T16:00:00");
-  startCountdown(weddingDate);
+  // const weddingDate = new Date("2026-03-06T16:00:00");
+  // startCountdown(weddingDate);
 
   // const qrcode = document.getElementById('qr-btn');
   // qrcode.addEventListener("click", toggleQR);
 
-  const btn = document.getElementById("player-btn");
-  btn.addEventListener("click", toggleMusic);
+  // const btn = document.getElementById("player-btn");
+  // btn.addEventListener("click", toggleMusic);
 
   const form = document.forms["rsvpForm"];
   if (form) {
@@ -325,18 +325,16 @@ async function handleFormSubmit(e) {
   const {
     name,
     confirm,
-    guest_number = "",
-    guest_info = "",
-    dietary = "",
-    other = "",
+    dietary,
+    another = "",
     wish = "",
   } = data;
   console.log("🚀 ~ handleFormSubmit 2~ data:", data);
 
   // Thông báo khi bắt đầu gửi
   Swal.fire({
-    title: "Đang gửi ...",
-    text: "Vui lòng chờ trong giây lát",
+    title: "Sending ...",
+    text: "Please wait a moment.",
     icon: "info",
     allowOutsideClick: false,
     didOpen: () => {
@@ -345,7 +343,7 @@ async function handleFormSubmit(e) {
   });
 
   const url =
-    "?sheet=confirm";
+    "https://script.google.com/macros/s/AKfycbyzMHe3w5pURek_ijGkchvFseOj5nVESOkkv8kSsG1UumzhVVqQC9YZOqI9F58zt-NC/exec?sheet=confirm";
 
   try {
     const res = await fetch(url, {
@@ -354,10 +352,8 @@ async function handleFormSubmit(e) {
       body: new URLSearchParams({
         name,
         confirm,
-        guest_number,
-        guest_info,
         dietary,
-        other,
+        another,
         wish,
       }),
     });
@@ -367,7 +363,7 @@ async function handleFormSubmit(e) {
     if (Object.keys(result).length === 0) {
       Swal.fire({
         title: "Lỗi!",
-        text: "OPPS! Không tìm thấy server",
+        text: "OPPS! Server not found!",
         icon: "error",
         confirmButtonText: "Thử lại",
         confirmButtonColor: "#000",
@@ -380,8 +376,8 @@ async function handleFormSubmit(e) {
 
     // Thông báo thành công
     Swal.fire({
-      title: "Thành công!",
-      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha",
+      title: "Success!",
+      text: "Thank you for your feedback; the information has already been sent to the bride and groom.",
       icon: "success",
       confirmButtonText: "OK",
       confirmButtonColor: "#000",
@@ -391,8 +387,8 @@ async function handleFormSubmit(e) {
 
     // Thông báo lỗi
     Swal.fire({
-      title: "Lỗi!",
-      text: "OPPS! Đã xảy ra lỗi: " + error.message,
+      title: "Error!",
+      text: "OPPS! Something went wrong: " + error.message,
       icon: "error",
       confirmButtonText: "Thử lại",
       confirmButtonColor: "#000",

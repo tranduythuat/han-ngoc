@@ -564,7 +564,7 @@ header {
 .dresscode .content {
   width: 100%;
   perspective: 1000px;
-  background: url("../../assets/images/flower_bg_02.png") no-repeat right 24%/45%;
+  background: url("../../assets/images/flower_bg_02.png") no-repeat right 20%/45%;
   background-color: #faf6ee;
   padding-bottom: 23%;
 }
@@ -576,20 +576,23 @@ header {
 }
 .dresscode .content .desc-img {
   margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 3%;
 }
 .dresscode .content .desc-img img {
   max-width: 50px;
   width: 100%;
   height: auto;
 }
-.dresscode .content .color-palette {
-  margin: 5% 0 3%;
+.dresscode .content .desc-img .dresscode-icon {
+  width: 10%;
   display: flex;
   justify-content: center;
-  text-align: center;
-  gap: 2%;
+  align-items: center;
 }
-.dresscode .content .color-palette .color-circle {
+.dresscode .content .desc-img .dresscode-icon .color-circle {
   max-width: 35px;
   width: 100%;
   aspect-ratio: 1;
@@ -598,6 +601,7 @@ header {
 .dresscode .content .sub-text {
   font-size: 16px;
   font-family: "ICIELBCOLDSTYLE", sans-serif;
+  margin-top: 2%;
 }
 .dresscode .content .couple-img {
   width: 100%;
@@ -752,6 +756,10 @@ header {
   margin: 0 auto;
   margin-bottom: 10%;
 }
+.upload .content .small-note {
+  font-family: "ICIELBCOLDSTYLE", sans-serif;
+  font-size: 12px;
+}
 @media (max-width: 500px) {
   .upload .content .divider img {
     max-width: 3vw;
@@ -762,6 +770,9 @@ header {
   .upload .content .upload-btn {
     font-size: 2.4vw;
     letter-spacing: 0.2vw;
+  }
+  .upload .content .small-note {
+    font-size: 2.4vw;
   }
 }
 
@@ -783,7 +794,6 @@ header {
   width: 100%;
   aspect-ratio: 500/730;
   margin: 0 auto;
-  padding-bottom: 10%;
 }
 .album .content .swiper img {
   width: 100%;
@@ -795,7 +805,7 @@ header {
   color: white;
 }
 .album .content .swiper .swiper-pagination-bullet-active {
-  background: #34393d;
+  background: rgb(215, 215, 215);
 }
 .album .content .swiper .swiper-pagination-bullet {
   width: 16px;
@@ -818,7 +828,6 @@ header {
 
 .swiper {
   margin: 0 auto;
-  padding: 0 0 10% !important;
 }
 
 .rsvp {
@@ -836,7 +845,7 @@ header {
 }
 .rsvp .content .top-img {
   position: absolute;
-  top: -6%;
+  top: 0;
 }
 .rsvp .content .top-img img {
   max-width: 250px;
@@ -1182,7 +1191,6 @@ header {
 }
 .letter-section .content {
   width: 100%;
-  margin: 5%;
   aspect-ratio: 500/887;
   background: url("../../assets/images/letter.png") no-repeat;
   background-position: center;

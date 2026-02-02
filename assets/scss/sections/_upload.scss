@@ -39,6 +39,10 @@
             margin: 0 auto;
             margin-bottom: 10%;
         }
+        .small-note {
+            font-family: $font-ICIELBCOLDSTYLE;
+            font-size: 12px;
+        }
     }
 
     @media (max-width: 500px) {
@@ -54,6 +58,10 @@
             .upload-btn {
                 font-size: calc((12 / 500) * 100vw);
                 letter-spacing: calc((1 / 500) * 100vw);
+            }
+
+            .small-note {
+                font-size: calc((12 / 500) * 100vw);
             }
         }
     }
