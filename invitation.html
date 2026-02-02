@@ -55,8 +55,11 @@
           </p>
           <div class="names">
             <div class="wife fade-right">Ngọc Hân</div>
-            <div class="ampersand fade-in">
+            <!-- <div class="ampersand fade-in">
               <img src="assets/images/icons/ampersand_icon_1.png" alt="" />
+            </div> -->
+            <div class="ampersand fade-in">
+              and
             </div>
             <div class="husband fade-left">Vũ Ngọc</div>
           </div>
@@ -75,8 +78,13 @@
             <div class="address fade-in">
               08 Nguyen Binh Khiem Street, Sai Gon Ward, HCMC
             </div>
-            <button class="maps-button fade-in">MAPS</button>
+            <button class="maps-button fade-in" id="maps-button">MAPS</button>
           </div>
+          <script>
+            document.getElementById("maps-button").addEventListener("click", () => {
+              window.open("https://maps.app.goo.gl/mkRXkuqGVGptHzri9", "_blank");
+            });
+          </script>
         </div>
       </section>
 

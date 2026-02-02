@@ -340,6 +340,7 @@ header {
 }
 .invite .content .names .wife {
   text-align: left;
+  margin-bottom: 5%;
 }
 .invite .content .names .husband {
   text-align: right;
@@ -349,12 +350,10 @@ header {
   width: 100%;
   max-width: 55px;
   width: 100%;
-  bottom: 0;
-  left: 5%;
-}
-.invite .content .names .ampersand img {
-  width: 100%;
-  height: auto;
+  top: 42%;
+  right: 39%;
+  font-size: 12px;
+  opacity: 0.6;
 }
 .invite .content .divider {
   margin-bottom: 10%;
