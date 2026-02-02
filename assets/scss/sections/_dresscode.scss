@@ -1,0 +1,85 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.dresscode {
+    width: 100%;
+    .content {
+        width: 100%;
+        perspective: 1000px;
+        background: url('../../assets/images/flower_bg_02.png') no-repeat right 24% / 45%;
+        background-color: $primary-color;
+        padding-bottom: 23%;
+        h2 {
+            font-family: $font-Bellamy-Stevenson;
+            font-size: 54px;
+            font-weight: 300;
+            margin-top: 17%;
+        }
+        .desc-img{
+            margin-top: 5%;
+            img {
+                max-width: 50px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .color-palette {
+            margin: 5% 0 3%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 2%;
+
+            .color-circle {
+                max-width: 35px;
+                width: 100%;
+                aspect-ratio: 1;
+                border-radius: 50%;
+            }
+        }
+        .sub-text {
+            font-size: 16px;
+            font-family: $font-ICIELBCOLDSTYLE;
+        }
+        .couple-img {
+            width: 100%;
+            @include flex-center;
+            margin-top: 12%;
+            .box-img {
+                max-width: 412px;
+                width: 100%;
+                aspect-ratio: 412 / 358;
+                position: relative;
+                img {
+                    max-width: 196px;
+                    width: 100%;
+                    height: auto;
+                }
+                img.dress_couple_01 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                img.dress_couple_02 {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            h2 {
+                font-size: calc((52 / 500) * 100vw);
+            }
+           
+            .color-palette {
+                .color-circle {
+                    max-width: calc((35 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}
