@@ -15,42 +15,50 @@
             font-weight: 300;
             margin-top: 17%;
         }
-        .desc-img{
-            margin-top: 5%;
+
+        .description-box {
             display: flex;
             justify-content: center;
-            text-align: center;
-            gap: 3%;
-            img {
-                max-width: 50px;
-                width: 100%;
-                height: auto;
+            gap: 5%;
+            .description {
+                .label {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: $font-ICIELBCOLDSTYLE;
+                }
+                .subtext {
+                    font-size: 18px;
+                    margin-top: 6%;
+                }
+                .color-palette {
+                    margin: 5% 0 3%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 10%;
+        
+                    .color-circle {
+                        max-width: 25px;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        border: 1px solid $text-color;
+                    }
+                }
             }
-            .dresscode-icon {
-                width: 10%;
-                @include flex-center;
-                .color-circle {
-                    max-width: 35px;
+            
+            .desc-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-width: 50px;
                     width: 100%;
-                    aspect-ratio: 1;
-                    border-radius: 50%;
+                    height: auto;
                 }
             }
         }
-        // .color-palette {
-        //     margin: 5% 0 3%;
-        //     display: flex;
-        //     justify-content: center;
-        //     text-align: center;
-        //     gap: 2%;
-
-        //     .color-circle {
-        //         max-width: 35px;
-        //         width: 100%;
-        //         aspect-ratio: 1;
-        //         border-radius: 50%;
-        //     }
-        // }
+        
         .sub-text {
             font-size: 16px;
             font-family: $font-ICIELBCOLDSTYLE;
@@ -89,10 +97,39 @@
             h2 {
                 font-size: calc((52 / 500) * 100vw);
             }
-           
-            .color-palette {
-                .color-circle {
-                    max-width: calc((35 / 500) * 100vw);
+
+            .description-box {
+                .description {
+                    .label {
+                        font-size: calc((16 / 500) * 100vw);
+                    }
+                    .subtext {
+                        font-size: calc((18 / 500) * 100vw);
+                    }
+                    .color-palette {
+                        .color-circle {
+                            max-width: calc((25 / 500) * 100vw);
+                        }
+                    }
+                }
+                
+                .desc-img{
+                    img {
+                        max-width: calc((50 / 500) * 100vw);
+                    }
+                }
+            }
+
+            .sub-text {
+                font-size: calc((16 / 500) * 100vw);
+            }
+
+            .couple-img {
+                .box-img {
+                    max-width: calc((412 / 500) * 100vw);
+                    img {
+                        max-width: calc((196 / 500) * 100vw);
+                    }
                 }
             }
         }

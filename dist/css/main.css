@@ -573,29 +573,43 @@ header {
   font-weight: 300;
   margin-top: 17%;
 }
-.dresscode .content .desc-img {
-  margin-top: 5%;
+.dresscode .content .description-box {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.dresscode .content .description-box .description .label {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "ICIELBCOLDSTYLE", sans-serif;
+}
+.dresscode .content .description-box .description .subtext {
+  font-size: 18px;
+  margin-top: 6%;
+}
+.dresscode .content .description-box .description .color-palette {
+  margin: 5% 0 3%;
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 3%;
+  gap: 10%;
 }
-.dresscode .content .desc-img img {
-  max-width: 50px;
+.dresscode .content .description-box .description .color-palette .color-circle {
+  max-width: 25px;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #521221;
 }
-.dresscode .content .desc-img .dresscode-icon {
-  width: 10%;
+.dresscode .content .description-box .desc-img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dresscode .content .desc-img .dresscode-icon .color-circle {
-  max-width: 35px;
+.dresscode .content .description-box .desc-img img {
+  max-width: 50px;
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
+  height: auto;
 }
 .dresscode .content .sub-text {
   font-size: 16px;
@@ -634,8 +648,26 @@ header {
   .dresscode .content h2 {
     font-size: 10.4vw;
   }
-  .dresscode .content .color-palette .color-circle {
-    max-width: 7vw;
+  .dresscode .content .description-box .description .label {
+    font-size: 3.2vw;
+  }
+  .dresscode .content .description-box .description .subtext {
+    font-size: 3.6vw;
+  }
+  .dresscode .content .description-box .description .color-palette .color-circle {
+    max-width: 5vw;
+  }
+  .dresscode .content .description-box .desc-img img {
+    max-width: 10vw;
+  }
+  .dresscode .content .sub-text {
+    font-size: 3.2vw;
+  }
+  .dresscode .content .couple-img .box-img {
+    max-width: 82.4vw;
+  }
+  .dresscode .content .couple-img .box-img img {
+    max-width: 39.2vw;
   }
 }
 
