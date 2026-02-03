@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //   swiper: thumbSwiper,
     // },
     autoplay: {
-      delay: 10000, // thời gian giữa các lần chuyển (ms)
+      delay: 4000, // thời gian giữa các lần chuyển (ms)
       disableOnInteraction: false, // không tắt khi người dùng bấm
     },
 
