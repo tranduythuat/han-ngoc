@@ -16,6 +16,13 @@
             margin-top: 17%;
         }
 
+        .subtitle {
+            font-size: 16px;
+            // font-family: $font-1FTV-VIP-Qerginas;
+            font-family: $font-ICIELBCOLDSTYLE;
+            margin: 1% 0 3%;
+        }
+
         .description-box {
             display: flex;
             justify-content: center;
@@ -97,6 +104,11 @@
             h2 {
                 font-size: calc((52 / 500) * 100vw);
             }
+
+            .subtitle {
+                font-size: calc((16 / 500) * 100vw);
+            }
+    
 
             .description-box {
                 .description {
